@@ -45,35 +45,34 @@ namespace deliverable2
                         }
                         else
                         {
-                            Console.WriteLine("I'm not sure what you should do, try again.");
+                            Console.WriteLine("I'm not sure what you should do, press enter and try again.");
                             Console.ReadLine();
                             Console.Clear();
                         }
                     }
                     else
                     {
-                        Console.WriteLine("I'm not sure what you should do, try again.");
+                        Console.WriteLine("I'm not sure what you should do, press enter and try again.");
                         Console.ReadLine();
                         Console.Clear();
                     }
                 }
                 else
                 {
-                    Console.WriteLine("I don't get it. Can you try that again? (Press ENTER)");
-                    Console.ReadLine();
-                    Console.Clear();
+                 Console.WriteLine("I'm not sure what you should do, press enter and try again.");
+                 Console.ReadLine();
+                 Console.Clear();   
                 }
             }
         }
 
         // Methods used to decipher inputs and return information for user
-        static string whatToDo(int bigMood) // Switch statement?
+        static string whatToDo(int bigMood)
         {
-            int nplace = bigMood - 1;
-            var moodList = new List<string> { "action", "chilling", "danger", "good food" };
-            if (nplace >= 0 && nplace <= 3)
+            var moodList = new List<string> { "nothing", "action", "chilling", "danger", "good food" };
+            if (bigMood >= 1 && bigMood <= 4)
             {
-                return moodList[nplace];
+                return moodList[bigMood];
             }
             else
             {
@@ -84,11 +83,10 @@ namespace deliverable2
 
         static string toDo(int placeToBe)
         {
-            int xplace = placeToBe - 1;
-            var placesToGo = new List<string> { "stock car racing", "hiking", "skydiving", "to Taco Bell" };
-            if (xplace >= 0 && xplace <= 3)
+            var placesToGo = new List<string> { "nowhere", "stock car racing", "hiking", "skydiving", "to Taco Bell" };
+            if (placeToBe >= 1 && placeToBe <= 4)
             {
-                return placesToGo[xplace];
+                return placesToGo[placeToBe];
             }
             else
             {
